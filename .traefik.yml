@@ -4,7 +4,7 @@ type: middleware
 
 import: github.com/vtacquet/redbase-plugin
 
-summary: "Redirect based on SQLite database entries"
+summary: "Redirect based on SQLite database entries to use with https://hub.docker.com/r/vtacquet/redbase"
 
 testData:
   redbaseurl: "127.0.0.1:9922"

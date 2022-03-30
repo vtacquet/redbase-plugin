@@ -1,6 +1,6 @@
 # Redbase Plugin
 
-Redbase Plugin is a middleware for [Traefik](https://github.com/traefik/traefik) that redirects according to records in an SQLite database served by a Redbase daemon from https://hub.docker.com/vtacquet/redbase
+Redbase Plugin is a middleware for [Traefik](https://github.com/traefik/traefik) that redirects according to records in an SQLite database served by a Redbase daemon from https://hub.docker.com/r/vtacquet/redbase
 
 ## Configuration
 
@@ -23,7 +23,7 @@ the usage of `Redbase` plugin middleware. The `redbaseurl` parameter is where th
 the fallback url when there is no redirection entry in the database or when the `Redbase` daemon is not available. Since this is
 a redirection middleware, the service can be set to `noop@internal`
 
-The `Redbase` Daemon can be downloaded from https://hub.docker.com/vtacquet/redbase
+The `Redbase` Daemon can be downloaded from https://hub.docker.com/r/vtacquet/redbase
 
 **http.yml**
 ```yaml

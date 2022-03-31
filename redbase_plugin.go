@@ -68,7 +68,6 @@ func (a *Redbase) ServeHTTP(rw http.ResponseWriter, req *http.Request) {
 	var request = getFullURL(req)
 	var answerurl = a.defaulturl
         dial, dialerr := net.DialTimeout("tcp", a.redbaseurl, 2*time.Second)
-	defer dial.Close()
         if dialerr != nil {
 		fmt.Println("Redbase daemon not reachable on " + a.redbaseurl)
 		fmt.Println("Redbase default redirect: " + request + " -> " + answerurl)

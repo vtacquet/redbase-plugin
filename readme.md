@@ -12,7 +12,7 @@ experimental:
   plugins:
     redbase:
       moduleName: github.com/vtacquet/redbase-plugin
-      version: "v0.1.0"
+      version: "v0.1.2"
 ```
 
 ## Dynamic

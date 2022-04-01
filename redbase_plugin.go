@@ -72,6 +72,7 @@ func (a *Redbase) ServeHTTP(rw http.ResponseWriter, req *http.Request) {
 		fmt.Println("Redbase daemon not reachable on " + a.redbaseurl)
 		fmt.Println("Redbase default redirect: " + request + " -> " + answerurl)
 	} else {
+                defer dial.Close()
 		fmt.Fprintf(dial, request+"\n")
                 answer, _ := bufio.NewReader(dial).ReadString('\n')
                 answertrim := strings.ToLower(strings.TrimSuffix(answer, "\n"))

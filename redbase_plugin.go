@@ -28,8 +28,9 @@ type Redbase struct {
 
 func New(ctx context.Context, next http.Handler, config *Config, name string) (http.Handler, error) {
 
+	fmt.Println("Redbase v0.1.6")
 	fmt.Println("Redbase plugin -- github.com/vtacquet/redbase-plugin")
-	fmt.Println("Redbase daemon -- github.com/vtacquet/redbase")
+	fmt.Println("Redbase daemon -- hub.docker.com/r/vtacquet/redbase")
 
 	if len(config.RedbaseURL) == 0 {
 		return nil, fmt.Errorf("Redbase 'redbaseurl' cannot be empty")

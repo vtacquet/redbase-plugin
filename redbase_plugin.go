@@ -75,7 +75,7 @@ func (a *Redbase) ServeHTTP(rw http.ResponseWriter, req *http.Request) {
                 defer dial.Close()
 		fmt.Fprintf(dial, request+"\n")
                 answer, _ := bufio.NewReader(dial).ReadString('\n')
-                answertrim := strings.ToLower(strings.TrimSuffix(answer, "\n"))
+                answertrim := strings.TrimSuffix(answer, "\n")
 		if answertrim != "@default" {
 			answerurl = answertrim
 			fmt.Println("Redbase database redirect: " + request + " -> " + answerurl)
